@@ -30,7 +30,7 @@ $(document).ready(function () {
     var id = $(this).data('id');
     var nome = prompt("Digite o novo nome:");
     var idade = prompt("Digite a nova idade:");
-    if (name !== null && idade !== null) {
+    if (nome !== null && idade !== null) {
       $.post('php/update.php', { id: id, nome: nome, idade: idade }, function (data) {
         loadPatients();
       });
